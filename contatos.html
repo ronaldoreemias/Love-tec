@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Tecno</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!--essa parte é responsavel pela nav-bar-->
+    <header>
+        <div class="logo-nome">
+            <h3>Love Tecno</h3>
+        </div>
+        <!--essa parte vai ter o botão que abrira o menu lateral-->
+        <div class="menu-lateral">
+            <button class="btn btn-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <img src="img/Menu_icon_2_icon-icons.com_71856.ico"  width="40" height="40">
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-unstyled">
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/categorias">Grupos do whatsapp</a></li>
+                        <li><a href="/ofertas">Contato</a></li>
+                        <li><a href="blog_Tec_Love.html">Blog de tecnologia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!---aqui é o coração, preciso adicionar mecânismo de filtragem em javascript-->
+    <main>
+        <br>
+        <br>
+        <h2 class="text-center mt-4">Grupos de WhatsApp</h2>
+        <div class="card" style="width: 18rem; border: none;">
+            <img src="img/whatsapp_icon-icons.com_62756.ico" class="card-img-top" alt="..." width="30px" height="180px" >
+            <div class="card-body">
+                <p class="card-text">Ainda não temos grupos de WhatsApp disponíveis no momento, mas em breve estarão disponíveis.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+    <!--essa parte é a barra de navegação fixa-->
+    <footer>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <div class="container-fluid d-flex justify-content-around">
+                <a class="nav-link text-white" href="blog_Tec_Love.html">Blog</a>
+                <a class="nav-link text-white" href="/carrinho">Grupos</a>
+                <a class="nav-link text-white" href="/perfil">Contato</a>
+            </div>
+        </nav>
+    </footer>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="back-end/java.js"></script>
+
+</html>

@@ -1,0 +1,248 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    
+    justify-content: space-between;
+    position: relative; 
+}
+
+.logo-nome{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    padding: 7px;
+    height: 100px; 
+    position: absolute;
+    left: 5%; 
+    top: 50%; 
+    transform: translateY(-50%);
+    border-radius: 10px; 
+    
+    /* Animação de "pano caindo" */
+    animation: deslizarParaBaixo 1.2s ease-in-out forwards;
+    transform-origin: top center;
+    opacity: 0;
+}
+
+/* Definição da animação */
+@keyframes deslizarParaBaixo {
+    0% {
+        transform: translateY(-150%) scaleY(0.1);
+        opacity: 0;
+        border-radius: 50% 50% 10px 10px;
+    }
+    60% {
+        transform: translateY(-80%) scaleY(1.1);
+        opacity: 0.8;
+        border-radius: 20px 20px 10px 10px;
+    }
+    80% {
+        transform: translateY(-45%) scaleY(0.95);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-50%) scaleY(1);
+        opacity: 1;
+        border-radius: 10px;
+    }
+}
+
+.logo-nome h3{
+    margin-top: 20px; 
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilização para o menu lateral */
+.menu-lateral {
+    margin-left: auto; 
+    margin-right: 20px; 
+}
+
+/* Estilos para o offcanvas */
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+.offcanvas-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.offcanvas-body > div {
+    width: 100%;
+}
+
+.offcanvas-body ul {
+    width: 100%;
+}
+
+.offcanvas-body li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.offcanvas-body li:last-child {
+    border-bottom: none;
+}
+
+.offcanvas-body a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.offcanvas-body a:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-botao{
+    margin-top: 25px;
+    display: flex;
+    justify-content: row;
+    gap: 10px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    margin-left: 2%;
+}
+
+.nav-botao::-webkit-scrollbar {
+    width: 8px;
+}
+
+.nav-botao::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav-botao::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.nav-botao::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.nav-botao button {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 10px;
+    gap: 10px; 
+    border: 1px solid #ddd; 
+    background-color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.nav-botao button:hover {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* preciso deixar os cards da div produtos divididos em grupos de 2 lado a lado */
+
+/* Melhorias para o layout dos produtos */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produtos a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.descricao {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.valor {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    border-top: 1px solid #eee;
+}
+
+/* Estilo para botões ativos */
+.nav-botao button.active {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    color: white !important;
+}
+
+
+
+/* Campo de busca */
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff !important;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+footer .navbar{
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.valor{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+    footer .navbar{
+        display: none;
+    }
+
+    input[type="text"] {
+
+        max-width: 90% !important;
+    }
+
+    .nav-botao{
+        justify-content: center;
+    }
+
+    
+}
+    

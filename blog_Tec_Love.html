@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnologia - Love Tecno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: white !important;
+        }
+        
+        .logo {
+            font-weight: 700;
+            color: rgb(44, 41, 41) !important;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .blog-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .blog-card-body {
+            padding: 20px;
+        }
+        
+        .blog-card-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .blog-card-text {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e9f5ff;
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--dark-color);
+        }
+        
+        .category-list, .popular-posts {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .category-list li, .popular-posts li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .category-list a, .popular-posts a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .category-list a:hover, .popular-posts a:hover {
+            color: var(--primary-color);
+        }
+        
+        .newsletter-form {
+            margin-top: 20px;
+        }
+        
+        .newsletter-form input {
+            border-radius: 20px;
+            padding: 10px 15px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .footer h5 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">Love Tecno</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog_Tec_Love.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatos.html">Grupos WhatsApp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Blog de Tecnologia</h1>
+            <p class="lead">As últimas novidades, análises e dicas do mundo tech</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <div class="blog-card">
+                    <div class="blog-card-body">
+                        <span class="tag">Inteligência Artificial</span>
+                        <span class="tag">Tendências</span>
+                        <h3 class="blog-card-title">Como a IA está revolucionando o mercado de smartphones em 2024</h3>
+                        <p class="blog-card-text">Descubra as principais inovações em inteligência artificial que estão transformando a forma como usamos nossos dispositivos móveis e o que esperar dos próximos lançamentos.</p>
+                        <div class="blog-meta">
+                            <span>Por: Carlos Silva</span>
+                            <span>15 de Maio, 2024</span>
+                        </div>
+                        <a href="https://forbes.com.br/last/2025/08/google-lanca-novos-smartphones-e-da-enfase-a-ia-em-vez-de-atualizacoes-do-hardware/" class="read-more">Ler mais →</a>
+                    </div>
+                </div>
+
+                <!-- Post Grid -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Notebooks">
+                            <div class="blog-card-body">
+                                <span class="tag">Notebooks</span>
+                                <h4 class="blog-card-title">Os melhores notebooks para trabalho remoto em 2024</h4>
+                                <p class="blog-card-text">Análise detalhada dos laptops mais adequados para quem trabalha de casa, com foco em desempenho, bateria e conectividade.</p>
+                                <div class="blog-meta">
+                                    <span>Por: Ana Costa</span>
+                                    <span>12 de Maio, 2024</span>
+                                </div>
+                                <a href="https://g1.globo.com/pr/parana/especial-publicitario/gigantec/noticia/2024/10/22/giga-dicas-melhores-notebooks-para-o-home-office.ghtml" class="read-more">Ler mais →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="TVs">
+                            <div class="blog-card-body">
+                                <span class="tag">TVs</span>
+                                <span class="tag">Entretenimento</span>
+                                <h4 class="blog-card-title">OLED vs QLED: Qual tecnologia de TV vale mais a pena?</h4>
+                                <p class="blog-card-text">Comparativo completo entre as duas principais tecnologias de tela disponíveis no mercado e qual escolher de acordo com seu uso.</p>
+                                <div class="blog-meta">
+                                    <span>Por: Roberto Alves</span>
+                                    <span>10 de Maio, 2024</span>
+                                </div>
+                                <a href="https://www.samsung.com/br/tvs/tv-buying-guide/what-is-qled-oled-and-neo-qled/" class="read-more">Ler mais →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Computadores">
+                            <div class="blog-card-body">
+                                <span class="tag">Computadores</span>
+                                <span class="tag">Gaming</span>
+                                <h4 class="blog-card-title">Montamos um PC gamer de alto desempenho por menos de R$ 5.000</h4>
+                                <p class="blog-card-text">Guia passo a passo para montar uma máquina capaz de rodar os jogos mais recentes com excelente custo-benefício.</p>
+                                <div class="blog-meta">
+                                    <span>Por: Lucas Mendes</span>
+                                    <span>8 de Maio, 2024</span>
+                                </div>
+                                <a href="https://canaltech.com.br/hardware/montar-pc-gamer-barato-ate-5000-reais/" class="read-more">Ler mais →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="blog-card">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Áudio">
+                            <div class="blog-card-body">
+                                <span class="tag">Áudio</span>
+                                <span class="tag">Review</span>
+                                <h4 class="blog-card-title">Os 5 melhores sistemas de som para sua casa em 2024</h4>
+                                <p class="blog-card-text">Análise dos soundbars e sistemas de áudio que oferecem a melhor experiência sonora para filmes, música e games.</p>
+                                <div class="blog-meta">
+                                    <span>Por: Mariana Santos</span>
+                                    <span>5 de Maio, 2024</span>
+                                </div>
+                                <a href="https://primesmarthouse.com/sistema-de-som-guia-completo/" class="read-more">Ler mais →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- About Section -->
+                <div class="sidebar">
+                    <h4 class="sidebar-title">Sobre o Blog</h4>
+                    <p>O blog Love Tecno traz as últimas novidades, análises e dicas sobre tecnologia, com foco em produtos eletrônicos e tendências do mercado.</p>
+                    <p>Nossa missão é ajudar você a fazer as melhores escolhas tecnológicas.</p>
+                </div>
+                
+                
+                <!-- Popular Posts -->
+                <div class="sidebar">
+                    <h4 class="sidebar-title">Posts Populares</h4>
+                    <ul class="popular-posts">
+                        <li>
+                            <a href="https://pentalobe.com.br/blog/como-escolher-o-smartphone-ideal-dicas-essenciais-para-uma-compra-inteligente">Como escolher o smartphone ideal para suas necessidades</a>
+                            <div class="blog-meta">
+                                <small>10 de Abril, 2024</small>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://fieldcontrol.com.br/blog/melhores-apps-para-aumentar-a-produtividade/">5 aplicativos essenciais para aumentar sua produtividade</a>
+                            <div class="blog-meta">
+                                <small>28 de Março, 2024</small>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://www.cnnbrasil.com.br/tecnologia/por-que-estas-tecnologias-vao-mudar-o-mundo-em-5-anos/">As tendências de tecnologia para os próximos 5 anos</a>
+                            <div class="blog-meta">
+                                <small>15 de Março, 2024</small>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://www.techtudo.com.br/comparativo/2024/11/samsung-galaxy-s24-vs-iphone-15-confira-o-que-muda-entre-os-celulares-edmobile.ghtml">Review: Samsung Galaxy S24 vs iPhone 15</a>
+                            <div class="blog-meta">
+                                <small>5 de Março, 2024</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="sidebar">
+                    <h4 class="sidebar-title">Newsletter</h4>
+                    <p>Receba as últimas novidades do mundo tech diretamente no seu email.</p>
+                    <form class="newsletter-form">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu melhor email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Love Tecno</h5>
+                    <p>Seu destino para as melhores ofertas em produtos de tecnologia e informações atualizadas sobre o mundo tech.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Loja</a></li>
+                        <li><a href="blog_Tec_Love.html">Blog</a></li>
+                        <li><a href="contatos.html">Grupos WhatsApp</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Smartphones</a></li>
+                        <li><a href="index.html">Notebooks</a></li>
+                        <li><a href="index.html">TVs</a></li>
+                        <li><a href="index.html">Computadores</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: contato@lovetecno.com</li>
+                        <li>Telefone: (82) 98887-3225</li>
+                        <li>Endereço: Rua Projetada, 123 - Maceió, AL</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Love Tecno. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Tecno</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <!--essa parte é responsavel pela nav-bar-->
+    <header>
+        <div class="logo-nome">
+            <h3>Love Tecno</h3>
+        </div>
+        <!--essa parte vai ter o botão que abrira o menu lateral-->
+        <div class="menu-lateral">
+            <button class="btn btn-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <img src="img/Menu_icon_2_icon-icons.com_71856.ico"  width="40" height="40">
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-unstyled">
+                        <li><a href="/">Início</a></li>
+                        <li><a href="contatos.html">Grupos do whatsapp</a></li>
+                        <li><a href="https://wa.me/5582988873225?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos." 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="whatsapp-link">
+                                    contato
+                            </a>
+                        </li>
+                        <li><a href="blog_Tec_Love.html">Blog de tecnologia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!---aqui é o coração, preciso adicionar mecânismo de filtragem em javascript-->
+    <main>
+        <!--nav de botões que vão filtrar os produtos, camisa , sapato , bermuda, brinquedos e etc.-->
+        <div class="nav-botao">
+
+             <button id="Smartphone">
+                <img src="img/iphone_mobile_phone_smartphone_apple_icon_134096.ico" width="20" height="20">
+                Smartphone
+            </button>
+            <button id="notebook">
+                <img src="img/976607-appliances-computer-laptop-notebook-portable-computer_106543.ico" width="22" height="22">
+                notebook
+            </button>
+            <button id="televisão">
+                <img src="img/television_tv_screen_icon_123445.ico"  width="25" height="25">
+                televisão
+            </button>
+            <button id="computador">
+                <img src="img/pc-computer-with-monitor_icon-icons.com_56249.ico"  width="30" height="30">
+                computador
+            </button>
+            <button id="som">
+                <img src="img/sound-speaker_icon-icons.com_58278.ico"  width="10" height="20">
+                som
+            </button>
+        </div>
+
+        <div class="produtos">
+            <!--aqui é onde os produtos vão aparecer-->
+            <!--preciso fazer com que os produtos sejam filtrados com base na escolha dos botões logo acima-->
+            <a class="link-produto"  href="">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://imgs.casasbahia.com.br/55067569/1g.jpg?imwidth=500" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram)</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Smartphone Motorola Moto G35 5g - 128gb 12gb (4gb Ram+8gb Ram Boost) E Camera 50mp Com Ai Nfc Tela 6.7 Com Superbrilho - Grafite - Vegan Leather
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                40% OFF
+                            </div>
+                           <div>
+                                 R$ 887,90
+                           </div>
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="https://mercadolivre.com/sec/1mLn2HC">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://images.kabum.com.br/produtos/fotos/sync_mirakl/729972/xlarge/Celular-Samsung-Galaxy-A16-256gb-8GB-Ram-C-mera-De-At-50mp-Tela-6-7-Nfc-Ip54-Bateria-5000-Mah-Preto-256-Gb-Bi-volt_1761270516.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Celular Samsung Galaxy A16 4G, 256gb + 8gb Ram</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Celular Samsung Galaxy A16 4G, 256gb + 8gb Ram, Câmera De Até 50mp, Tela 6.7 , Nfc, Ip54, Bateria 5000 Mah Preto
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                37% OFF
+                            </div>
+                           <div>
+                                 R$ 1.169,90
+                           </div>
+
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://m.media-amazon.com/images/I/710BXPlJ65L.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Celular Samsung Galaxy S24</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Celular Samsung Galaxy S24, Galaxy Ai, Câmera Tripla Traseira De Até 50mp, Selfie De 12mp, Tela De 6.2 1-120hz, 256gb, 8gb De Ram, Esim Cinza
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                43% OFF
+                            </div>
+                           <div>
+                                 R$ 3.332,90
+                           </div>
+
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="https://mercadolivre.com/sec/2YoCyWX">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_735669-MLB93316833678_092025-O.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Tv Samsung 43 Ls43f6000fgxzd Full Hd Led 110v/220v</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Smart Tv Samsung 43 Ls43f6000fgxzd Full Hd Led 110v/220v
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                46% OFF
+                            </div>
+                           <div>
+                                 R$ 1.598,90
+                           </div>
+
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="https://mercadolivre.com/sec/2rqgpsq">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://assets.pechinchou.com.br/media/img/products/social/fba59fb8-8533-4adb-92d8-455ab1562930.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitor Gamer LG 24MS500-B</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Monitor Gamer LG 24MS500-B 24ms Ips Fullhd 100hz Ajuste De Inclinação Negro
+                        </div>
+                        <div class="valor">
+                            <div>
+                                    R$ 550,00
+                            </div>
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="https://mercadolivre.com/sec/1RTqzHB">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://imgs.extra.com.br/1575318746/1xg.jpg?imwidth=500" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Notebook ASUS Vivobook S14</h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Notebook ASUS Vivobook S14 S3407VA Intel Core i5 13420H 16GB Ram 512GB SSD Windows 11 Tela 14" LED FHD Silver - LY044W
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                20% OFF
+                            </div>
+                            <div>
+                                    R$ 3.692,00
+                            </div>
+                        </div>
+                </div>
+            </a>
+
+            <a class="link-produto" href="https://s.shopee.com.br/10ubXyTiQT">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd72-m6qwlu077qbwf7" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Computador Gamer Completo Branco i5 </h5>
+                            <img src="img/bag_buy_cart_market_shop_shopping_tote_icon_123191.ico" width="25px" height="25px" alt="">
+                        </div>
+                        <div class="descricao">
+                            Computador Gamer Completo Branco i5 Memoria Ram 16GB Monitor Teclado Mouse e Headset
+                        </div>
+                        <div class="valor">
+                            <div style="color: red; font-weight: bold;">
+                                60% OFF
+                            </div>
+                            <div>
+                                    R$ 1.528,00
+                            </div>
+                        </div>
+                </div>
+            </a>
+
+
+        </div>
+        <br>
+        <br>
+    </main>
+    <!--essa parte é a barra de navegação fixa-->
+    <footer>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <div class="container-fluid d-flex justify-content-around">
+                <a class="nav-link text-white" href="blog_Tec_Love.html">Blog</a>
+                <a class="nav-link text-white" href="contatos.html">Grupos</a>
+                <a class="nav-link text-white" href="https://wa.me/5582988873225?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos.">Contato</a>
+            </div>
+        </nav>
+    </footer>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="back-end/java.js"></script>
+
+</html>
